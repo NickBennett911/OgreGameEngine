@@ -17,13 +17,14 @@ Some of the features the game engine does (in the foreground and background):
   Logging
   Input Bindings
   
- Once you get everything built and running you will get a little taste of what some of the engine can do with the little space invaders demonstration. This is contained within the
- bin/media/invader_media/ folder. There you will find the custom python scripts that the game is running off of as well as the meshes, materials and the scene file for the space
- invaders. 
+Once you get everything built and running you will get a little taste of what some of the engine can do with the little space invaders demonstration. This is contained within the
+bin/media/invader_media/ folder. There you will find the custom python scripts that the game is running off of as well as the meshes, materials and the scene file for the space
+invaders. 
  
- To add more scripts:
+To add more scripts:
  - nav to bin/media/init.py
  - add more scripts the same way as is done in that file
- The engine intializes the scripting by running that python file.
+
+The engine intializes the scripting by running that python file.
  
  
