@@ -1,0 +1,38 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"projectIndex" : 0,
+					"source" : "."
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				}
+			],
+			"targets" : []
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/JuniorYear/Second_Semester/RealTime2/RealTime2MainProject/dependencies/ogre1.12.10_vc2019_x64/Docs/out/build/x64-Debug (default)",
+		"source" : "D:/JuniorYear/Second_Semester/RealTime2/RealTime2MainProject/dependencies/ogre1.12.10_vc2019_x64/Docs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

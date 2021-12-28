@@ -1,0 +1,2 @@
+D:/JuniorYear/Second_Semester/RealTime2/RealTime2MainProject/dependencies/ogre1.12.10_vc2019_x64/Docs/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+D:/JuniorYear/Second_Semester/RealTime2/RealTime2MainProject/dependencies/ogre1.12.10_vc2019_x64/Docs/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

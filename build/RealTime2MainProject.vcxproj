@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e2494622-7db0-4fa1-adf3-265043a4f8a5}</ProjectGuid>
+    <RootNamespace>RealTime2MainProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+    <IntDir>..\tmp\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+    <IntDir>..\tmp\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\dependencies\bullet3-3.09\include\bullet\;D:\JuniorYear\Second_Semester\RealTime2\RealTime2MainProject\dependencies\python39_x64\include;..\dependencies\tinyxml2\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\Bites;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE;..\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\RTShaderSystem;..\dependencies\SDL2-2.0.14\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\Overlay;..\dependencies\python39_x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\dependencies\bullet3-3.09\lib;..\dependencies\python39_x64\libs;..\dependencies\tinyxml2\lib;..\dependencies\SDL2-2.0.14\lib\x64;..\dependencies\ogre1.12.10_vc2019_x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreBites_d.lib;OgreMain_d.lib;OgreOverlay_d.lib;OgreRTShaderSystem_d.lib;tinyxml2d.lib;python39_d.lib;SDL2.lib;SDL2main.lib;BulletDynamics_Debug.lib;BulletCollision_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\dependencies\bullet3-3.09\include\bullet\;D:\JuniorYear\Second_Semester\RealTime2\RealTime2MainProject\dependencies\python39_x64\include;..\dependencies\tinyxml2\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\Bites;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE;..\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\RTShaderSystem;..\dependencies\SDL2-2.0.14\include\;..\dependencies\ogre1.12.10_vc2019_x64\include\OGRE\Overlay;..\dependencies\python39_x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\dependencies\bullet3-3.09\lib;..\dependencies\python39_x64\libs;..\dependencies\SDL2-2.0.14\lib\x64;..\dependencies\tinyxml2\lib;..\dependencies\ogre1.12.10_vc2019_x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreBites.lib;OgreMain.lib;OgreOverlay.lib;OgreRTShaderSystem.lib;tinyxml2.lib;python39.lib;SDL2.lib;SDL2main.lib;BulletCommon.lib;BulletDynamics.lib;BulletCollision.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\application.cpp" />
+    <ClCompile Include="..\src\box_collider.cpp" />
+    <ClCompile Include="..\src\collider.cpp" />
+    <ClCompile Include="..\src\camera_component.cpp" />
+    <ClCompile Include="..\src\component.cpp" />
+    <ClCompile Include="..\src\game_object.cpp" />
+    <ClCompile Include="..\src\game_object_manager.cpp" />
+    <ClCompile Include="..\src\input_manager.cpp" />
+    <ClCompile Include="..\src\light_component.cpp" />
+    <ClCompile Include="..\src\log_manager.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\mesh_component.cpp" />
+    <ClCompile Include="..\src\physics_manager.cpp" />
+    <ClCompile Include="..\src\script_functions.cpp" />
+    <ClCompile Include="..\src\script_game_object.cpp" />
+    <ClCompile Include="..\src\script_manager.cpp" />
+    <ClCompile Include="..\src\singleton.cpp" />
+    <ClCompile Include="..\src\sphere_collider.cpp" />
+    <ClCompile Include="..\src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\application.h" />
+    <ClInclude Include="..\include\box_collider.h" />
+    <ClInclude Include="..\include\collider.h" />
+    <ClInclude Include="..\include\camera_component.h" />
+    <ClInclude Include="..\include\collision_listener.h" />
+    <ClInclude Include="..\include\component.h" />
+    <ClInclude Include="..\include\game_object.h" />
+    <ClInclude Include="..\include\game_object_manager.h" />
+    <ClInclude Include="..\include\input_listener.h" />
+    <ClInclude Include="..\include\input_manager.h" />
+    <ClInclude Include="..\include\light_component.h" />
+    <ClInclude Include="..\include\log_manager.h" />
+    <ClInclude Include="..\include\mesh_component.h" />
+    <ClInclude Include="..\include\physics_manager.h" />
+    <ClInclude Include="..\include\script_functions.h" />
+    <ClInclude Include="..\include\script_game_object.h" />
+    <ClInclude Include="..\include\script_manager.h" />
+    <ClInclude Include="..\include\singleton.h" />
+    <ClInclude Include="..\include\sphere_collider.h" />
+    <ClInclude Include="..\include\stdafx.h" />
+    <ClInclude Include="..\include\utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
