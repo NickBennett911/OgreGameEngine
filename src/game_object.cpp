@@ -22,9 +22,6 @@ ssuge::GameObject::~GameObject() {
 		delete it->second;
 	}
 
-	//if (mTwin) {
-	//	Py_DECREF(mTwin);
-	//}
 }
 
 

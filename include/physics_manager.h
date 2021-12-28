@@ -46,18 +46,29 @@ namespace ssuge {
 
 		// ***** METHODS ***** 
 	public:
+		/// adds the rigid body to the mDynamicsWorld to be handled within Bullet as well
 		void add_ridgid_body(btRigidBody* ridg);
+		
+		/// updates all of our rigid bodys and any collisions between them
 		void update(float dt);
+
+		/// registers the listener into the queue to be notified when there is a collision
 		void register_listener(ssuge::CollisionListener* listener);
+
+		/// removes the listener from the update list
 		void deregister_listener(ssuge::CollisionListener* listener);
+
+		/// will notify the objects if there was a collision between the two and they are registered listeners
 		void broadcast_collision(ssuge::Collider* collider, ssuge::Collider* hit_collider);
+
+		/// adds the listener to the queue to be removed
 		void queue_listener_for_removal(ssuge::CollisionListener* listener) { mListenerRemoveQueue.push_back(listener); }
+		
+		/// purges the ListenersRemoveQueue and removes the desired listeners
 		void purge_listeners();
+
+		/// removes the rigidbody from the DynamicsWorld so Bullets stops simulating it behind the scenes
 		void remove_rigid_body(btRigidBody* body) { mDynamicsWorld->removeRigidBody(body); }
-
-
-	protected:
-
 		
 
 	};

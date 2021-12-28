@@ -163,24 +163,33 @@ namespace ssuge
 		/// Makes all components of this object active / visible (or not, if the parameter is false)
 		void set_visibility(bool is_visible) { mSceneNode->setVisible(is_visible); }
 
+		/// creates and attaches a mesh component to our entity, requires mesh name
 		MeshComponent* create_mesh_component(std::string name);
 
+		/// creates and attaches camera compoenent to the game object
 		CameraComponent* create_camera_component();
 
+		/// creates and attaches the esired light type to the game object
 		LightComponent* create_light_componenet(LightType type);
 
+		/// creates childed box collider to the game object
 		BoxCollider* create_box_collider(float xdim, float ydim, float zdim, float mass, bool is_kinematic);
 
+		/// creates childed sphere component to the game object
 		SphereCollider* create_sphere_collider(float radius, float mass, bool is_kinematic);
 	
+		/// returns weather or not the game object has the requested component type
 		bool has_component_type(ssuge::ComponentType type);
 
+		/// game objects update method, calles update on all required components
 		void update(float dt);
 
+		/// sets the script twin for this game object
 		void set_twin(PyObject* twin) { 
 			mTwin = twin; 
 		}
 
+		//** INPUT AND COLLISION METHODS **//
 		void action_pressed(std::string action) override;
 		void action_released(std::string action) override;
 		void axis_updated(std::string axis, float value) override;
@@ -190,7 +199,7 @@ namespace ssuge
 	template<class T>
 	inline T* GameObject::get_component(ssuge::ComponentType type)
 	{
-		if (mComponents[type]) {
+		if (mComponents[type]) {	// if the game object has the requested component then return in
 			return (T*)mComponents[type];
 		}
 		return nullptr;

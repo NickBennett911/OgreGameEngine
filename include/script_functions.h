@@ -6,6 +6,8 @@ namespace ssuge {
 		// return Py_None when not returning something. NULL means an error:
 		// Py_INCREF(Py_None);
 		// return Py_None;
+		// ALL THE SCRIPT CALLABLE FUNCTION GIVEN TO USERS
+
 		PyObject* load_scene(PyObject* module, PyObject* args);
 
 		PyObject* log(PyObject* module, PyObject* args);

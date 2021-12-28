@@ -19,6 +19,7 @@ namespace ssuge
 		/*---ATTRIBUTES---*/
 	protected:
 		int data;
+
 		Ogre::SceneManager* mSceneManager;
 		ssuge::LogManager* mLogManager;
 		ssuge::GameObjectManager* mGameObjManager;
@@ -36,20 +37,27 @@ namespace ssuge
 		~Application();
 
 	/*---GETTERS/SETTERS---*/
-	public:
 		Ogre::SceneManager* get_scene_manager();
+		/// sets our skybox
 		void setSkyBox(bool active, const char* name, int dist);
 
 	/*---OTHER METHODS---*/
 	protected:
+		/// sets some important Ogre things as well as initializes all of our managers
 		void setup(void);
+		/// runs the init.py script file to setup the scene
 		void setup_sceen();
-
+		/// update method that calles all the required managers updates and passes in the delta time
 		bool frameStarted(const Ogre::FrameEvent& evt) override;
 	
 	public:
 		void run();
+		/// <summary>
+		/// sets the active camera to the one given
+		/// </summary>
+		/// <param name="target"></param> desired camera component
 		void set_active_camera(ssuge::CameraComponent* target);
+		/// closes the application
 		void quit_app();
 
 

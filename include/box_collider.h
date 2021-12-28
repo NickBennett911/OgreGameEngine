@@ -15,7 +15,7 @@ namespace ssuge {
 
 	protected:
 		btCollisionShape* mCollisionBody;
-		bool mIs_kinematic;
+		bool mIs_kinematic;		// if it simulates physics or not
 		btDefaultMotionState* myMotionState;
 		int mMass;
 

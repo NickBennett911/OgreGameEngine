@@ -71,17 +71,24 @@ namespace ssuge
 		/// Creates a new game object.  This creates a group as well, if the given one doesn't exist.
 		GameObject* create_game_object(std::string group_name, std::string object_name, GameObject* parent = NULL, unsigned int tag = 0);
 
+		/// iterates over all game objects and calls their update.
+		/// also calls the script update method if the object has a script mTwin
 		void update_game_objects(float dt);
 
+		/// recursively goes through the xml fname given loading in and sting game objects as it goes
 		tinyxml2::XMLError load_scene_file(std::string group_name, std::string fname);
 
+		/// finds and returns the given ridgidbody
 		btRigidBody* find_rigid_body(btRigidBody body);
 
-		void queue_game_object_destruction(ssuge::GameObject* obj) { mDestructionQueue.push_back(obj); }
+		/// this will add the given obj to the mDestrucionQueue so that the next time the destruction queue can be purged safely it will get destroyed
+		inline void queue_game_object_destruction(ssuge::GameObject* obj) { mDestructionQueue.push_back(obj); }
 
+		/// destroys all the game objects in the destrucion queue
 		void purge_destruction_queue();
 
 	protected:
+		/* HELPER FUNCTIONS FOR THE LOAD SCENE FILE - THESE WILL NEVER BE USED ANYWHERE ELSE */
 		void process_XML_node(tinyxml2::XMLElement * elem, GameObject* cur_parent);
 
 		void process_LIGHT_node(tinyxml2::XMLElement* elem, GameObject* cur_parent);
